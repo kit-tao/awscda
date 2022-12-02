@@ -1,0 +1,5 @@
+aws eks --region us-east-1 create-cluster --name myEKS --role-arn arn:aws:iam::910475624256:role/myEKSClusterRole \
+--resources-vpc-conf subnetIds=subnet-023696bf7d53b2979,subnet-03fde165199a5159c,subnet-01de1932b4eeb0378,securityGroupIds=sg-0f0b4901febdb5243
+
+aws eks --region us-east-1 describe-cluster --name myEKS \
+--query cluster.status
