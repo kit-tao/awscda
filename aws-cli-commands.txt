@@ -1,1 +1,2 @@
 aws cloudformation create-stack --stack-name udacityEKS --template-body file://myEKS-cluster.yml --region us-east-1
+aws cloudformation create-stack --stack-name udacityEKSNodeGroup --template-body file://myEKS-nodegroup.yml --region us-east-1

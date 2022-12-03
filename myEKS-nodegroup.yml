@@ -1,0 +1,20 @@
+Resources:
+  udacityEKSNodeGroup:
+    Type: AWS::EKS::Nodegroup
+    Properties: 
+      ClusterName: myEKSCluster
+      DiskSize: 20
+      InstanceTypes: 
+        - t3.micro
+      NodegroupName: myEKSNodeGroup
+      NodeRole:  'arn:aws:iam::910475624256:role/myEKSWorkerNodeRole'
+      ScalingConfig: 
+        DesiredSize: 2
+        MaxSize: 2
+        MinSize: 2
+      Subnets: 
+        - subnet-023696bf7d53b2979
+        - subnet-03fde165199a5159c
+        - subnet-01de1932b4eeb0378
+
+    
