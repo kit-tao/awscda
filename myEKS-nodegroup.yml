@@ -8,6 +8,11 @@ Resources:
         - t3.micro
       NodegroupName: myEKSNodeGroup
       NodeRole:  'arn:aws:iam::910475624256:role/myEKSWorkerNodeRole'
+      RemoteAccess:
+        Ec2SshKey: mykubekey
+        SourceSecurityGroups: 
+          - sg-0b6f4c447154977ca
+
       ScalingConfig: 
         DesiredSize: 2
         MaxSize: 2
